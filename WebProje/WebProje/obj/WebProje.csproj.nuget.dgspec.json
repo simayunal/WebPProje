@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO\\source\\repos\\WebProje\\WebProje\\WebProje.csproj": {}
+    "C:\\Users\\LENOVO\\OneDrive\\Belgeler\\GitHub\\WebPProje\\WebProje\\WebProje\\WebProje.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO\\source\\repos\\WebProje\\WebProje\\WebProje.csproj": {
+    "C:\\Users\\LENOVO\\OneDrive\\Belgeler\\GitHub\\WebPProje\\WebProje\\WebProje\\WebProje.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\source\\repos\\WebProje\\WebProje\\WebProje.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\OneDrive\\Belgeler\\GitHub\\WebPProje\\WebProje\\WebProje\\WebProje.csproj",
         "projectName": "WebProje",
-        "projectPath": "C:\\Users\\LENOVO\\source\\repos\\WebProje\\WebProje\\WebProje.csproj",
+        "projectPath": "C:\\Users\\LENOVO\\OneDrive\\Belgeler\\GitHub\\WebPProje\\WebProje\\WebProje\\WebProje.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\source\\repos\\WebProje\\WebProje\\obj\\",
+        "outputPath": "C:\\Users\\LENOVO\\OneDrive\\Belgeler\\GitHub\\WebPProje\\WebProje\\WebProje\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -51,20 +51,11 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
