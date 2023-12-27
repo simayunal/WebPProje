@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QtO6WeH8gp1ZZHasD7Pi1Ig0PTexJyHKuJ7mIKsCsLs=",
+  "Hash": "r2kcu5ZY2Y+C+OaaYiaYRmZqSc2E983O6SveIIvkaI8=",
   "Source": "WebProje1",
   "BasePath": "_content/WebProje1",
   "Mode": "Default",
@@ -55,6 +55,25 @@
       "OriginalItemSpec": "C:\\Users\\LENOVO\\source\\repos\\WebProje1\\WebProje1\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebProje1.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\LENOVO\\source\\repos\\WebProje1\\WebProje1\\wwwroot\\css\\font-awesome.css",
+      "SourceId": "WebProje1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LENOVO\\source\\repos\\WebProje1\\WebProje1\\wwwroot\\",
+      "BasePath": "_content/WebProje1",
+      "RelativePath": "css/font-awesome.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\font-awesome.css"
+    },
+    {
       "Identity": "C:\\Users\\LENOVO\\source\\repos\\WebProje1\\WebProje1\\wwwroot\\css\\site.css",
       "SourceId": "WebProje1",
       "SourceType": "Discovered",
@@ -72,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\LENOVO\\source\\repos\\WebProje1\\WebProje1\\wwwroot\\css\\style.css",
+      "SourceId": "WebProje1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LENOVO\\source\\repos\\WebProje1\\WebProje1\\wwwroot\\",
+      "BasePath": "_content/WebProje1",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
       "Identity": "C:\\Users\\LENOVO\\source\\repos\\WebProje1\\WebProje1\\wwwroot\\favicon.ico",

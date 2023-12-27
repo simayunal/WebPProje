@@ -274,3 +274,4 @@ C:\Users\LENOVO\source\repos\WebProje1\WebProje1\obj\Debug\net6.0\refint\WebProj
 C:\Users\LENOVO\source\repos\WebProje1\WebProje1\obj\Debug\net6.0\WebProje1.pdb
 C:\Users\LENOVO\source\repos\WebProje1\WebProje1\obj\Debug\net6.0\WebProje1.genruntimeconfig.cache
 C:\Users\LENOVO\source\repos\WebProje1\WebProje1\obj\Debug\net6.0\ref\WebProje1.dll
+C:\Users\LENOVO\source\repos\WebProje1\WebProje1\obj\Debug\net6.0\WebProje1.sourcelink.json

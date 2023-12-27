@@ -1,0 +1,34 @@
+﻿@model Admin
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="row">
+    <div class="col-4 offset-4">
+        <h1 class="display-4 border-bottom text-center pb-2">@ViewData["Title"]</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-4 offset-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger small"></div>
+
+            <div class="form-group mb-3">
+                <label asp-for="AdminEmail" class="form-label">AdminEmail</label>
+                <input asp-for="AdminEmail" type="email" class="form-control" />
+                <span asp-validation-for="AdminEmail" class="text-danger small"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="AdminPassword" class="form-label">Re-Password</label>
+                <input asp-for="AdminPassword" type="password" class="form-control" />
+                <span asp-validation-for="AdminPassword" class="text-danger small"></span>
+            </div>
+
+            <div class="form-group d-grid mb-3">
+                <button type="submit" class="btn btn-primary d-block">Register</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -5,8 +5,16 @@
       "PackagePath": "staticwebassets\\WebProje1.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\WebProje1\\WebProje1\\wwwroot\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.css"
+    },
+    {
       "Id": "C:\\Users\\LENOVO\\source\\repos\\WebProje1\\WebProje1\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\WebProje1\\WebProje1\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
       "Id": "C:\\Users\\LENOVO\\source\\repos\\WebProje1\\WebProje1\\wwwroot\\favicon.ico",

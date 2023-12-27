@@ -1,0 +1,43 @@
+﻿<!-- Views/Admin/Aircraft.cshtml -->
+@model WebProje1.Models.Aircraft
+
+@{
+    ViewData["Title"] = "Uçak Ekle";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<!-- Hata veya Başarı Mesajları -->
+@if (!string.IsNullOrEmpty(ViewBag.error))
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.error
+    </div>
+}
+
+@if (!string.IsNullOrEmpty(ViewBag.correct))
+{
+    <div class="alert alert-success" role="alert">
+        @ViewBag.correct
+    </div>
+}
+
+<!-- Form içeriği -->
+<form asp-controller="Admin" asp-action="Aircraft" method="post">
+    <!-- Gerekli input alanları -->
+    <div class="form-group">
+        <label asp-for="AircraftModel">Uçak Modeli:</label>
+        <input asp-for="AircraftModel" class="form-control" />
+        <span asp-validation-for="AircraftModel" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AircraftSeats">Koltuk Sayısı:</label>
+        <input asp-for="AircraftSeats" class="form-control" />
+        <span asp-validation-for="AircraftSeats" class="text-danger"></span>
+    </div>
+
+    <!-- Diğer input alanları -->
+
+    <button type="submit" class="btn btn-primary">Uçak Ekle</button>
+</form>
