@@ -5,7 +5,12 @@ namespace WebProje1
 {
 	public class DatabaseContext : DbContext
 	{
-		private readonly IConfiguration _configuration;
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<UserAccount>().HasNoKey();
+        }
+
+        private readonly IConfiguration _configuration;
 		public DatabaseContext(IConfiguration configuration)
 		{
 			_configuration = configuration;

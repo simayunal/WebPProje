@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebProje1;
 
@@ -10,9 +11,11 @@ using WebProje1;
 namespace WebProje1.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20231227213008_simayyyy")]
+    partial class simayyyy
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,7 +40,7 @@ namespace WebProje1.Migrations
 
                     b.HasKey("AdminID");
 
-                    b.ToTable("Admins", (string)null);
+                    b.ToTable("Admins");
                 });
 
             modelBuilder.Entity("WebProje1.Models.Aircraft", b =>
@@ -56,7 +59,7 @@ namespace WebProje1.Migrations
 
                     b.HasKey("AircraftID");
 
-                    b.ToTable("Aircrafts", (string)null);
+                    b.ToTable("Aircrafts");
                 });
 
             modelBuilder.Entity("WebProje1.Models.Flight", b =>
@@ -79,7 +82,7 @@ namespace WebProje1.Migrations
 
                     b.HasIndex("ItineraryID");
 
-                    b.ToTable("Flights", (string)null);
+                    b.ToTable("Flights");
                 });
 
             modelBuilder.Entity("WebProje1.Models.Itinerary", b =>
@@ -113,7 +116,7 @@ namespace WebProje1.Migrations
 
                     b.HasKey("ItineraryID");
 
-                    b.ToTable("Itineraries", (string)null);
+                    b.ToTable("Itineraries");
                 });
 
             modelBuilder.Entity("WebProje1.Models.Passenger", b =>
@@ -135,7 +138,7 @@ namespace WebProje1.Migrations
 
                     b.HasKey("PassengerID");
 
-                    b.ToTable("Passengers", (string)null);
+                    b.ToTable("Passengers");
                 });
 
             modelBuilder.Entity("WebProje1.Models.Reservation", b =>
@@ -169,7 +172,7 @@ namespace WebProje1.Migrations
 
                     b.HasKey("ReservationID");
 
-                    b.ToTable("Reservations", (string)null);
+                    b.ToTable("Reservations");
                 });
 
             modelBuilder.Entity("WebProje1.Models.UserAccount", b =>
@@ -191,7 +194,7 @@ namespace WebProje1.Migrations
 
                     b.HasKey("UserAccountID");
 
-                    b.ToTable("UserAccounts", (string)null);
+                    b.ToTable("UserAccounts");
                 });
 
             modelBuilder.Entity("WebProje1.Models.Flight", b =>

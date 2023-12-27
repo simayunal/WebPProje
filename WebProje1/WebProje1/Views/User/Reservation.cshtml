@@ -15,24 +15,29 @@
     </div>
 }
 
-<!-- Rezervasyon Formu -->
+<!-- ... diğer HTML kodları -->
+
 <form asp-controller="User" asp-action="Reservation" method="post">
     <div class="form-group">
-        <label asp-for="FlightID">Uçuş Seç:</label>
-        <select asp-for="FlightID" class="form-control" asp-items="@(new SelectList(ViewBag.Flights, "Value", "Text"))"></select>
+        <label asp-for="DepartureAirport">Nereden:</label>
+        <input asp-for="DepartureAirport" class="form-control" />
     </div>
 
-    <!--
     <div class="form-group">
-        <label asp-for="PassengerName">Yolcu Adı:</label>
-        <input asp-for="PassengerName" class="form-control" />
+        <label asp-for="ArrivalAirport">Nereye:</label>
+        <input asp-for="ArrivalAirport" class="form-control" />
     </div>
-    -->
 
     <div class="form-group">
         <label asp-for="SeatNumber">Koltuk Numarası:</label>
         <input asp-for="SeatNumber" class="form-control" />
     </div>
 
+    <div class="form-group">
+        <label asp-for="DepartureDate">Tarih:</label>
+        <input asp-for="DepartureDate" class="form-control" />
+    </div>
+
     <button type="submit" class="btn btn-primary">Rezervasyon Yap</button>
 </form>
+

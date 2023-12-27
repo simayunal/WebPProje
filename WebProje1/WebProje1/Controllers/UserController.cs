@@ -1,11 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using WebProje1;
 using WebProje1.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using WebProje1;
 
 namespace AirplaneSeatReservation.Controllers
 {
@@ -18,35 +15,27 @@ namespace AirplaneSeatReservation.Controllers
             this.flightCS = flightCS;
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult ViewFlights()
         {
-            return View();
-        }
-
-        public async Task<IActionResult> FlightList()
-        {
-            var flights = await flightCS.Flights.ToListAsync();
+            var flights = flightCS.Flights.Include(f => f.Aircraft).Include(f => f.Itinerary).ToList();
             return View(flights);
         }
 
         [HttpGet]
         public IActionResult Reservation()
         {
-            var flights = flightCS.Flights.ToList();
-            ViewBag.Flights = new SelectList(flights, "FlightID", "FlightID");
+            var flights = flightCS.Flights.Include(f => f.Aircraft).Include(f => f.Itinerary).ToList();
+            ViewBag.Flights = new SelectList(flights, "FlightID", "FlightDetails");
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Reservation(int flightID, string passengerName, string seatNumber)
+        public async Task<IActionResult> Reservation(string seatNumber, string departureAirport, string arrivalAirport, string departureTime, string departureDate)
         {
-            // Rezervasyon işlemleri burada yapılır
-            // flightID, passengerName, seatNumber gibi bilgileri kullanabilirsiniz
-
+            // Rezervasyon işlemleri
             ViewBag.correct = "Rezervasyon başarıyla yapıldı!";
             return View("Reservation");
         }
-
-        // Diğer kullanıcı işlemleri için eylemler ekleyebilirsiniz
     }
 }
