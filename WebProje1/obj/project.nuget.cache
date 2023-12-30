@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CZHWoc/VggCV0UJC8JmBR4SXoEERnZHyld4YxpnHa8f6oJcQlqKriAaXbii0Ry3Bg6A3Na8+BS/CLdOwPQ4BbA==",
+  "dgSpecHash": "wPMWGzZo+rR6Mji6Bu0EP/fRO5UMZ58p7Y8er+uHxsVT8Wh/lXoZbqilFlOYM0GwBinmXQg1cVOdErg2dpuH2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LENOVO\\source\\repos\\WebProje1\\WebProje1\\WebProje1.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\OneDrive\\Masaüstü\\WebProje1 - Kopya\\WebProje1\\WebProje1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

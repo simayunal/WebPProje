@@ -37,7 +37,7 @@ namespace WebProje1.Migrations
 
                     b.HasKey("AdminID");
 
-                    b.ToTable("Admins");
+                    b.ToTable("Admins", (string)null);
                 });
 
             modelBuilder.Entity("WebProje1.Models.Aircraft", b =>
@@ -56,7 +56,7 @@ namespace WebProje1.Migrations
 
                     b.HasKey("AircraftID");
 
-                    b.ToTable("Aircrafts");
+                    b.ToTable("Aircrafts", (string)null);
                 });
 
             modelBuilder.Entity("WebProje1.Models.Flight", b =>
@@ -75,7 +75,11 @@ namespace WebProje1.Migrations
 
                     b.HasKey("FlightID");
 
-                    b.ToTable("Flights");
+                    b.HasIndex("AircraftID");
+
+                    b.HasIndex("ItineraryID");
+
+                    b.ToTable("Flights", (string)null);
                 });
 
             modelBuilder.Entity("WebProje1.Models.Itinerary", b =>
@@ -86,6 +90,9 @@ namespace WebProje1.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ItineraryID"));
 
+                    b.Property<string>("ArrivalAirport")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ArrivalCity")
                         .HasColumnType("nvarchar(max)");
 
@@ -95,9 +102,18 @@ namespace WebProje1.Migrations
                     b.Property<string>("DepartureAirport")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("DepartureCity")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DepartureDate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DepartureTime")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("ItineraryID");
 
-                    b.ToTable("Itinerarys");
+                    b.ToTable("Itineraries", (string)null);
                 });
 
             modelBuilder.Entity("WebProje1.Models.Passenger", b =>
@@ -119,7 +135,7 @@ namespace WebProje1.Migrations
 
                     b.HasKey("PassengerID");
 
-                    b.ToTable("Passengers");
+                    b.ToTable("Passengers", (string)null);
                 });
 
             modelBuilder.Entity("WebProje1.Models.Reservation", b =>
@@ -129,6 +145,18 @@ namespace WebProje1.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReservationID"));
+
+                    b.Property<int>("ArrivalAirport")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DepartureAirport")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DepartureDate")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DepartureTime")
+                        .HasColumnType("int");
 
                     b.Property<int>("FlightID")
                         .HasColumnType("int");
@@ -141,7 +169,7 @@ namespace WebProje1.Migrations
 
                     b.HasKey("ReservationID");
 
-                    b.ToTable("Reservations");
+                    b.ToTable("Reservations", (string)null);
                 });
 
             modelBuilder.Entity("WebProje1.Models.UserAccount", b =>
@@ -163,7 +191,26 @@ namespace WebProje1.Migrations
 
                     b.HasKey("UserAccountID");
 
-                    b.ToTable("UserAccounts");
+                    b.ToTable("UserAccounts", (string)null);
+                });
+
+            modelBuilder.Entity("WebProje1.Models.Flight", b =>
+                {
+                    b.HasOne("WebProje1.Models.Aircraft", "Aircraft")
+                        .WithMany()
+                        .HasForeignKey("AircraftID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WebProje1.Models.Itinerary", "Itinerary")
+                        .WithMany()
+                        .HasForeignKey("ItineraryID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Aircraft");
+
+                    b.Navigation("Itinerary");
                 });
 #pragma warning restore 612, 618
         }

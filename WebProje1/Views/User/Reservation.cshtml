@@ -1,0 +1,43 @@
+﻿<!-- Views/Admin/Reservation.cshtml -->
+@model WebProje1.Models.Reservation
+
+@{
+    ViewData["Title"] = "Uçak Rezervasyonu";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<!-- Başarı Mesajı -->
+@if (!string.IsNullOrEmpty(ViewBag.correct))
+{
+    <div class="alert alert-success" role="alert">
+        @ViewBag.correct
+    </div>
+}
+
+<!-- ... diğer HTML kodları -->
+
+<form asp-controller="User" asp-action="Reservation" method="post">
+    <div class="form-group">
+        <label asp-for="DepartureAirport">Nereden:</label>
+        <input asp-for="DepartureAirport" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ArrivalAirport">Nereye:</label>
+        <input asp-for="ArrivalAirport" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SeatNumber">Koltuk Numarası:</label>
+        <input asp-for="SeatNumber" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DepartureDate">Tarih:</label>
+        <input asp-for="DepartureDate" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Rezervasyon Yap</button>
+</form>
+

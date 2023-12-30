@@ -1,41 +1,5 @@
-﻿@model UserAccount
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
 @{
-    ViewData["Title"] = "Login";
 }
-
-
-<div class="row">
-    <div class="col-4 offset-4">
-        <h1 class="display-4 border-bottom text-center pb-2">@ViewData["Title"]</h1>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-4 offset-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger small"></div>
-
-            <div class="form-group mb-3">
-                <label asp-for="FirstName" class="form-label">Username</label>
-                <input asp-for="FirstName" class="form-control" />
-                <span asp-validation-for="FirstName" class="text-danger small"></span>
-            </div>
-
-            <div class="form-group mb-3">
-                <label asp-for="LastName" class="form-label">LastName</label>
-                <input asp-for="LastName"  class="form-control" />
-                <span asp-validation-for="LastName" class="text-danger small"></span>
-            </div>
-
-            <div class="form-group mb-3">
-                <label asp-for="Email" class="form-label">Email</label>
-                <input asp-for="Email" type="email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger small"></span>
-            </div>
-
-            <div class="form-group d-grid mb-3">
-                <button type="submit" class="btn btn-primary d-block">Login</button>
-            </div>
-        </form>
-    </div>
-</div>

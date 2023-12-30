@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - WebProje1</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebProje1.styles.css" asp-append-version="true" />
 </head>
@@ -22,10 +23,32 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                       
+
+                        <li class="nav-item ms-auto">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Aircraft">Aircraft</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Flight">Flight</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Route">Route</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="RouteList">RouteList</a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Reservation">Reservation</a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                        </li>
+                        
 
                     </ul>
                 </div>
