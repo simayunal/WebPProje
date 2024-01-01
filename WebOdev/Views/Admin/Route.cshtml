@@ -1,0 +1,67 @@
+﻿<!-- Views/Admin/Route.cshtml -->
+@model WebOdev.Models.Itinerary
+
+@{
+    ViewData["Title"] = "Güzergah Ekle";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<!-- Hata veya Başarı Mesajları -->
+@if (!string.IsNullOrEmpty(ViewBag.error))
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.error
+    </div>
+}
+
+@if (!string.IsNullOrEmpty(ViewBag.correct))
+{
+    <div class="alert alert-success" role="alert">
+        @ViewBag.correct
+    </div>
+}
+
+<!-- Form içeriği -->
+<form asp-controller="Admin" asp-action="Route" method="post">
+    <!-- Gerekli input alanları -->
+    <div class="form-group">
+        <label asp-for="DepartureCity">Kalkış Şehri:</label>
+        <input asp-for="DepartureCity" class="form-control" />
+        <span asp-validation-for="DepartureCity" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ArrivalCity">Varış Şehri:</label>
+        <input asp-for="ArrivalCity" class="form-control" />
+        <span asp-validation-for="ArrivalCity" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DepartureAirport">Kalkış Havaalanı:</label>
+        <input asp-for="DepartureAirport" class="form-control" />
+        <span asp-validation-for="DepartureAirport" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ArrivalAirport">Varış Havaalanı:</label>
+        <input asp-for="ArrivalAirport" class="form-control" />
+        <span asp-validation-for="ArrivalAirport" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DepartureDate">Kalkış Tarihi:</label>
+        <input asp-for="DepartureDate" class="form-control" />
+        <span asp-validation-for="DepartureDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DepartureTime">Kalkış Saati:</label>
+        <input asp-for="DepartureTime" class="form-control" />
+        <span asp-validation-for="DepartureTime" class="text-danger"></span>
+    </div>
+
+    <!-- Diğer input alanları -->
+
+    <button type="submit" class="btn btn-primary">Güzergah Ekle</button>
+</form>
