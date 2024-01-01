@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Profile";
+}
+
+
+
+<div class="row">
+    <div class="col-4 offset-4">
+        <h1 class="display-4 border-bottom text-center pb-2">@ViewData["Title"]</h1>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-4">
+
+        <div class="mb-4">
+            <div asp-validation-summary="All" class="text-danger small"></div>
+        </div>
+
+        <form method="post" asp-action="ProfileChangeFullName">
+            <div class="form-group">
+                <label class="form-label small">Name Surname</label>
+                <div class="input-group mb-3">
+                    <input name="fullname" type="text" class="form-control" placeholder="John Doe" value="@ViewData["FullName"]" />
+                    <button class="btn btn-secondary" type="submit"><i class="fa-solid fa-floppy-disk me-2"></i>Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+

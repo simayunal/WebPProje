@@ -1,0 +1,12 @@
+﻿@model List<WebOdev.Models.Itinerary>
+
+<h2>Route List</h2>
+
+<!-- Your HTML code for displaying Route List -->
+
+<ul>
+    @foreach (var itinerary in Model)
+    {
+        <li>@itinerary.DepartureCity - @itinerary.ArrivalCity</li>
+    }
+</ul>
